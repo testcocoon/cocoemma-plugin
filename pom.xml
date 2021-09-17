@@ -9,7 +9,7 @@
   </parent>
 
   <artifactId>cocoemma</artifactId>
-  <version>5.0.1-SNAPSHOT</version>
+  <version>5.0.2-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
   <name>Squish Coco Emma plugin</name>
@@ -45,7 +45,7 @@
   </scm>
 
   <properties>
-    <jenkins.version>2.204.2</jenkins.version>
+    <jenkins.version>2.303.1</jenkins.version>
     <java.level>8</java.level>
     <workflow-jenkins-plugin.version>1.11</workflow-jenkins-plugin.version>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -73,6 +73,11 @@
       <version>3.5</version>
       <type>jar</type>
     </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-digester3</artifactId>
+        <version>3.2</version>
+      </dependency>
   </dependencies>
   
  <dependencyManagement>
@@ -80,15 +85,20 @@
       <!-- https://mvnrepository.com/artifact/io.jenkins.tools.bom/bom-2.164.x -->
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.204.x</artifactId>
+        <artifactId>bom-2.303.x</artifactId>
         <version>13</version>
         <!--<scope>import</scope>-->
         <type>pom</type>
       </dependency>
       <dependency>
-          <groupId>org.apache.commons</groupId>
-          <artifactId>commons-lang3</artifactId>
-          <version>3.9</version>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.9</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-digester3</artifactId>
+        <version>3.2</version>
       </dependency>
       <!--<dependency>
           <groupId>org.slf4j</groupId>
@@ -249,8 +259,6 @@
     </plugins>
   </pluginManagement>
   </build>
-
-
 
     <pluginRepositories>
         <pluginRepository>
